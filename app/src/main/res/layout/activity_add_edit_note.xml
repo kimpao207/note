@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_edit_note">
+
+    <EditText
+        android:id="@+id/note_title_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="請輸入標題"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note_cancel" />
+
+    <TextView
+        android:id="@+id/note_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="標題"
+        android:textColor="@color/themecolor"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/note_title_enter"
+        app:layout_constraintStart_toStartOf="@+id/note_title_enter" />
+
+    <ToggleButton
+        android:id="@+id/time_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:textOff="關閉"
+        android:textOn="開啟"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_notice_txt" />
+
+    <TextView
+        android:id="@+id/time_notice_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提醒"
+        android:textColor="@color/themecolor"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/time_notice"
+        app:layout_constraintStart_toStartOf="@+id/time_notice"
+        app:layout_constraintTop_toTopOf="@+id/edit_date" />
+
+    <Button
+        android:id="@+id/date_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/trans"
+        android:text="2021/10/30"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_time"
+        app:layout_constraintStart_toStartOf="@+id/edit_time"
+        app:layout_constraintTop_toBottomOf="@+id/edit_date" />
+
+    <TextView
+        android:id="@+id/edit_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="提醒日期"
+        android:textColor="@color/themecolor"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/date_choose"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/date_choose"
+        app:layout_constraintTop_toBottomOf="@+id/note_title_enter" />
+
+    <Button
+        android:id="@+id/time_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:background="@color/trans"
+        android:text="03:22"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_time" />
+
+    <TextView
+        android:id="@+id/edit_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="提醒時間"
+        android:textColor="@color/themecolor"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/time_choose"
+        app:layout_constraintStart_toStartOf="@+id/time_choose"
+        app:layout_constraintTop_toBottomOf="@+id/date_choose" />
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:hint="請輸入內容"
+        android:inputType="textMultiLine"
+        android:maxLines="8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_choose"
+        app:layout_constraintVertical_bias="0.156" />
+
+    <TextView
+        android:id="@+id/content_view"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:visibility="invisible"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:maxLines="8"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_choose"
+        app:layout_constraintVertical_bias="0.156" />
+
+    <ImageButton
+        android:id="@+id/back_to_note"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@color/trans"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/trans"
+        android:text="新增"
+        android:textColor="@color/themecolor"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/note_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/trans"
+        android:text="刪除"
+        android:textColor="@color/themecolor"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/add_edit"
+        app:layout_constraintEnd_toStartOf="@+id/add_edit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
